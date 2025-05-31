@@ -11,3 +11,5 @@ class Expense(Base, BaseEntity):
     expenseDate = Column(Date, nullable=False)
     categoryId = Column(Integer, ForeignKey('Category.id'), nullable=False)
     category = relationship('Category', backref='expenses', lazy = 'joined')
+    expenseOriginId = Column(Integer, ForeignKey('ExpenseOrigin.id'), nullable=False)
+    expenseOrigin = relationship('ExpenseOrigin', backref='expenses', lazy = 'joined')

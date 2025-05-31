@@ -14,6 +14,8 @@ sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 's
 
 from entities.category import Category
 from entities.expense import Expense
+from entities.expense_origin import ExpenseOrigin
+from entities.balance import Balance
 from entities.common.base import base_metadata
 
 # Interpret the config file for Python logging.
@@ -26,6 +28,7 @@ user = os.environ.get("DB_USER")
 password = os.environ.get("DB_PASSWORD")
 host = os.environ.get("DB_HOST")
 database = os.environ.get("DB_NAME")
+
 database_url = f"postgresql+psycopg2://{user}:{password}@{host}/{database}"
 if database_url:
     print(f"URL env.py {database_url}")

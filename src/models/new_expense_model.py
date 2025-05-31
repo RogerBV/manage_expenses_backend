@@ -6,3 +6,4 @@ class NewExpenseModel(BaseModel):
     price: float
     expenseDate: date
     categoryId: int
+    expenseOriginId: int

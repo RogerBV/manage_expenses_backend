@@ -8,3 +8,5 @@ class RegisteredExpenseModel(BaseModel):
     expenseDate: date
     categoryId: int
     categoryName: str
+    expenseOriginId: int
+    expenseOriginName: str

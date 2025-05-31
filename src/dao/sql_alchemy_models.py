@@ -4,6 +4,7 @@ from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from src.entities import Category
 from src.entities import Expense
+from src.entities import ExpenseOrigin
 import psycopg2
 
 engine = create_engine(DATABASE_URI)
