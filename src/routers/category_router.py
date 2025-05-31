@@ -12,11 +12,11 @@ category_router = APIRouter(
 
 @category_router.get('')
 async def get_categories(db: Session = Depends(get_db)) -> list[RegisteredCategoryModel]:
-    categoryDAO = CategoryDAO(db)
-    return await categoryDAO.get_categories()
+    category_dao = CategoryDAO(db)
+    return await category_dao.get_categories()
 
 
 @category_router.put('')
-async def create_category(newCategoryModel: NewCategoryModel, db: Session = Depends(get_db)) -> RegisteredCategoryModel:
-    categoryDAO = CategoryDAO(db)
-    return await categoryDAO.create_category(newCategoryModel)
+async def create_category(new_category_model: NewCategoryModel, db: Session = Depends(get_db)) -> RegisteredCategoryModel:
+    category_dao = CategoryDAO(db)
+    return await category_dao.create_category(new_category_model)
