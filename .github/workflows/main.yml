@@ -53,6 +53,10 @@ jobs:
     - name: Install dependencies
       run: |
         poetry install --no-root
+        
+    - name: Run Alembic migrations
+      run: | 
+        poetry run alembic upgrade head
 
     - name: Run integration tests
       run: |
